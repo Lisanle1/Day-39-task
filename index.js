@@ -1,10 +1,11 @@
+const fs=require('fs')
 const express=require("express");
 const router=require('./router/router');
 const dotenv=required('dotenv')
-const app=express();
-const PORT=process.env.PORT || 3001;
 
 dotenv.config();
+const PORT=process.env.PORT || 3001;
+const app=express();
 app.use(express.json());
 
 
