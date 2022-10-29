@@ -1,8 +1,12 @@
 const express=require("express");
-const router=require('./router/router')
+const router=require('./router/router');
+const dotenv=required('dotenv')
 const app=express();
-const PORT=3001
+const PORT=process.env.PORT || 3001;
+
+dotenv.config();
 app.use(express.json());
+
 
 app.get('/',(req,res)=>{
     res.send("Please use endpoints: /file/create- to create &&  /file/list- to lists");
